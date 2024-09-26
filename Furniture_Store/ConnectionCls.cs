@@ -27,6 +27,19 @@ namespace Furniture_Store
             con.Close();
             return i;
         }
+
+        public void Fun_NonQuery_SP(SqlCommand cmd)
+        {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
+            cmd.Connection = con;
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
         public string Fun_Scalar(string query) // scalar functions
         {
             if (con.State == ConnectionState.Open)

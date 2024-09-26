@@ -35,27 +35,13 @@
         .auto-style7 {
             width: 866px;
         }
-        .auto-style8 {
-            height: 40px;
-            width: 153px;
-        }
-        .auto-style9 {
-            height: 40px;
-            width: 866px;
-        }
         .auto-style11 {
             height: 20px;
             width: 190px;
         }
-        .auto-style13 {
-            width: 267px;
-        }
         .auto-style14 {
             height: 20px;
             width: 208px;
-        }
-        .auto-style15 {
-            width: 214px;
         }
         .auto-style16 {
             width: 190px;
@@ -67,6 +53,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="nav-justified bill_table">
+        <tr>
+            <td colspan="2" class="text-center">
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+            </td>
+        </tr>
         <tr>
             <td colspan="2" class="text-center">
                 <asp:Label ID="Label1" runat="server" Font-Italic="True" Font-Size="X-Large" ForeColor="Black" Text="Checkout"></asp:Label>
@@ -162,7 +154,7 @@
         <tr>
             <td class="auto-style5">&nbsp;</td>
             <td class="auto-style7 text-right">
-                <asp:Button ID="Button1" runat="server" BackColor="#E99C2E" BorderStyle="None" Font-Bold="True" ForeColor="Black" Height="30px" Text="Pay" Width="80px" OnClick="Button1_Click" />
+                <asp:Button ID="Btn_Pay" runat="server" BackColor="#E99C2E" BorderStyle="None" Font-Bold="True" ForeColor="Black" Height="30px" Text="Pay" Width="80px" OnClick="Btn_Pay_Click1" />
             </td>
         </tr>
         <tr>
@@ -170,9 +162,11 @@
             <td class="auto-style7">&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8"></td>
-            <td class="auto-style9">
-                <asp:Panel ID="PanelPmt" runat="server" BorderStyle="Solid" BorderWidth="1px" BorderColor="#CCCCCC" Visible="False">
+            <td class="auto-style5">&nbsp;</td>
+            <td class="auto-style7">
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
+                        <asp:Panel ID="PanelPmt" runat="server" BorderStyle="Solid" BorderWidth="1px" BorderColor="#CCCCCC" Visible="False">
                     <table class="nav-justified">
                         <tr>
                             <td class="text-center" colspan="3">
@@ -180,7 +174,7 @@
                         </tr>
                         <tr>
                             <td class="text-center" colspan="3">
-                                <asp:Label ID="LblPmt" runat="server" Font-Italic="True" Font-Size="Large" ForeColor="Black" Text="Payment"></asp:Label>
+                                <asp:Label ID="Label2" runat="server" Font-Italic="True" Font-Size="Large" ForeColor="Black" Text="Payment"></asp:Label>
                             </td>
                         </tr>
                         <tr>
@@ -191,10 +185,10 @@
                         <tr>
                             <td class="auto-style14">
                                 &nbsp;</td>
-                            <td class="auto-style11">&nbsp;<asp:Label ID="LblAccName" runat="server" Text="Account Name"></asp:Label>
+                            <td class="auto-style11">&nbsp;<asp:Label ID="Label3" runat="server" Text="Account Name"></asp:Label>
                             </td>
                             <td class="auto-style1">
-                                <asp:TextBox ID="TextBox2" runat="server" Height="30px" Width="250px"></asp:TextBox>
+                                <asp:TextBox ID="TxtAccName" runat="server" Height="30px" Width="250px"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -205,10 +199,10 @@
                         <tr>
                             <td class="auto-style17">
                                 &nbsp;</td>
-                            <td class="auto-style16">&nbsp;<asp:Label ID="LblAccNo" runat="server" Text="Account Number"></asp:Label>
+                            <td class="auto-style16">&nbsp;<asp:Label ID="Label4" runat="server" Text="Account Number"></asp:Label>
                             </td>
                             <td>
-                                <asp:TextBox ID="TextBox3" runat="server" Height="30px" Width="250px"></asp:TextBox>
+                                <asp:TextBox ID="TxtAccNo" runat="server" Height="30px" Width="250px"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -219,24 +213,10 @@
                         <tr>
                             <td class="auto-style17">
                                 &nbsp;</td>
-                            <td class="auto-style16">&nbsp;<asp:Label ID="LblIfce" runat="server" Text="IFSC"></asp:Label>
+                            <td class="auto-style16">&nbsp;<asp:Label ID="Label5" runat="server" Text="Balance Amount"></asp:Label>
                             </td>
                             <td>
-                                <asp:TextBox ID="TextBox4" runat="server" Height="30px" Width="250px"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="auto-style17">&nbsp;</td>
-                            <td class="auto-style16">&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td class="auto-style17">
-                                &nbsp;</td>
-                            <td class="auto-style16">&nbsp;<asp:Label ID="LblBalance" runat="server" Text="Balance Amount"></asp:Label>
-                            </td>
-                            <td>
-                                <asp:TextBox ID="TextBox5" runat="server" Height="30px" Width="250px"></asp:TextBox>
+                                <asp:TextBox ID="TxtAccBal" runat="server" Height="30px" Width="250px"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -248,7 +228,19 @@
                             <td class="auto-style17">&nbsp;</td>
                             <td class="auto-style16">&nbsp;</td>
                             <td>
-                                <asp:Button ID="BtnPmtAdd" runat="server" BackColor="#E99C2E" BorderStyle="None" Font-Bold="True" Height="30px" Text="Add" Width="100px" />
+                                <asp:Button ID="AccAdd" runat="server" BackColor="#E99C2E" BorderStyle="None" Font-Bold="True" Height="30px" Text="Add" Width="100px" OnClick="AccAdd_Click" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style14"></td>
+                            <td class="auto-style11"></td>
+                            <td class="auto-style1"></td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style17">&nbsp;</td>
+                            <td class="auto-style16">&nbsp;</td>
+                            <td>
+                                <asp:Label ID="LblMsg" runat="server" ForeColor="Red" Text="Label" Visible="False"></asp:Label>
                             </td>
                         </tr>
                         <tr>
@@ -258,19 +250,14 @@
                         </tr>
                     </table>
                 </asp:Panel>
+                    </ContentTemplate>
+
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="Btn_Pay" EventName="Click" />
+                    </Triggers>
+
+                </asp:UpdatePanel>
             </td>
-        </tr>
-        <tr>
-            <td class="auto-style5">&nbsp;</td>
-            <td class="auto-style7">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style5">&nbsp;</td>
-            <td class="auto-style7">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style5">&nbsp;</td>
-            <td class="auto-style7">&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style5">&nbsp;</td>

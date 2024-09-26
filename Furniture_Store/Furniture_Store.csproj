@@ -122,6 +122,7 @@
     <Content Include="index.html" />
     <Content Include="Login.aspx" />
     <Content Include="MainPage.aspx" />
+    <Content Include="Payment.aspx" />
     <Content Include="Prod_Add.aspx" />
     <Content Include="Prod_Display.aspx" />
     <Content Include="Prod_SingleView.aspx" />
@@ -188,6 +189,13 @@
     </Compile>
     <Compile Include="MainPage.aspx.designer.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Prod_Add.aspx.cs">
       <DependentUpon>Prod_Add.aspx</DependentUpon>
