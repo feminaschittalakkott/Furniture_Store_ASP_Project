@@ -27,6 +27,12 @@ namespace Furniture_Store
                 string reg_id = obc.Fun_Scalar(qr1);
                 Session["uid"] = Convert.ToInt32(reg_id);
 
+                bool isLoggedIn = Session["uid"] != null;
+
+                // Register a script to pass this info to the HTML page
+                ClientScript.RegisterStartupScript(this.GetType(), "sessionScript",
+                    $"<script type='text/javascript'>var isLoggedIn = {isLoggedIn.ToString().ToLower()};</script>");
+
                 string qr2 = "select Log_Type from Login where Username = '" + TxtUname.Text + "' and Password = '" + TxtPwd.Text + "'";
                 string log_type = obc.Fun_Scalar(qr2);
 

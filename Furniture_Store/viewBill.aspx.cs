@@ -28,8 +28,29 @@ namespace Furniture_Store
 
         protected void Btn_Pay_Click1(object sender, EventArgs e)
         {
-            PanelPmt.Visible = true;
-            UpdatePanel1.Update();
+            string qry = "select count(Acc_Id) from Account_Table where User_Id = " + Session["uid"] + "";
+            string cid = obc.Fun_Scalar(qry);
+            int count = Convert.ToInt32(cid);
+            if(count == 0)
+            {
+                PanelPmt.Visible = true;
+                UpdatePanel1.Update();
+            }
+            else
+            {
+                string q = "select * from Account_Table where User_Id = " + Session["uid"] + "";
+                SqlDataReader dr = obc.Fun_Reader(q);
+                while (dr.Read())
+                {
+                    PanelPmt.Visible = true;
+                    AccAdd.Visible = false;
+                    BtnEditPay.Visible = true;
+                    BtnPayContinue.Visible = true;
+                    TxtAccName.Text = dr["Acc_Name"].ToString();
+                    TxtAccNo.Text = dr["Acc_No"].ToString();
+                    TxtAccBal.Text = dr["Acc_Balance"].ToString();
+                }
+            }
         }
 
         protected void AccAdd_Click(object sender, EventArgs e)
@@ -63,6 +84,26 @@ namespace Furniture_Store
                 LblMsg.Text = "Account details addeding failed !";
             }
 
+        }
+
+        protected void BtnEditPay_Click(object sender, EventArgs e)
+        {
+            string qry = "update Account_Table set Acc_No = " + TxtAccNo.Text + ", Acc_Name = '" + TxtAccName.Text + "', Acc_Balance = " + TxtAccBal.Text + " where User_Id = " + Session["uid"] + "";
+            int i = obc.Fun_Nonquery(qry);
+            if(i == 1)
+            {
+                Response.Redirect("Payment.aspx");
+            }
+            else
+            {
+                LblMsg.Visible = true;
+                LblMsg.Text = "Failed Editing Account Details !";
+            }
+        }
+
+        protected void BtnPayContinue_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Payment.aspx");
         }
     }
 }

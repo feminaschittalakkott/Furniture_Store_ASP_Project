@@ -24,6 +24,24 @@ namespace Furniture_Store
         protected global::System.Web.UI.WebControls.Label cartLable;
 
         /// <summary>
+        /// LblEmptyCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblEmptyCart;
+
+        /// <summary>
+        /// CartPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel CartPanel;
+
+        /// <summary>
         /// cartList control.
         /// </summary>
         /// <remarks>
@@ -42,6 +60,15 @@ namespace Furniture_Store
         protected global::System.Web.UI.WebControls.Label gTotLabel;
 
         /// <summary>
+        /// LblCurrency control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblCurrency;
+
+        /// <summary>
         /// GTotPrice control.
         /// </summary>
         /// <remarks>
@@ -49,6 +76,24 @@ namespace Furniture_Store
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label GTotPrice;
+
+        /// <summary>
+        /// ErrMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ErrMsg;
+
+        /// <summary>
+        /// BtnContinue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnContinue;
 
         /// <summary>
         /// Btn_Proceed control.

@@ -79,57 +79,18 @@
 				            <!-- Start Atribute Navigation -->
 				            <div class="attr-nav">
 				                <ul>
-				                	<li class="login">
-				                		<a href="Login.aspx"><span class="lnr lnr-user"></span></a>
-				                	</li><!--/.search-->
 				                	<li class="search">
 				                		<a href="#"><span class="lnr lnr-magnifier"></span></a>
 				                	</li><!--/.search-->
-				                	<li class="nav-setting">
-				                		<a href="#"><span class="lnr lnr-cog"></span></a>
-				                	</li><!--/.search-->
-				                    <li class="dropdown">
-				                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
-				                            <span class="lnr lnr-cart"></span>
-											<span class="badge badge-bg-1">2</span>
-				                        </a>
-				                        <ul class="dropdown-menu cart-list s-cate">
-				                            <li class="single-cart-list">
-				                                <a href="#" class="photo"><img src="assets/images/collection/arrivals1.png" class="cart-thumb" alt="image" /></a>
-				                                <div class="cart-list-txt">
-				                                	<h6><a href="#">arm <br> chair</a></h6>
-				                                	<p>1 x - <span class="price">$180.00</span></p>
-				                                </div><!--/.cart-list-txt-->
-				                                <div class="cart-close">
-				                                	<span class="lnr lnr-cross"></span>
-				                                </div><!--/.cart-close-->
-				                            </li><!--/.single-cart-list -->
-				                            <li class="single-cart-list">
-				                                <a href="#" class="photo"><img src="assets/images/collection/arrivals2.png" class="cart-thumb" alt="image" /></a>
-				                                <div class="cart-list-txt">
-				                                	<h6><a href="#">single <br> armchair</a></h6>
-				                                	<p>1 x - <span class="price">$180.00</span></p>
-				                                </div><!--/.cart-list-txt-->
-				                                <div class="cart-close">
-				                                	<span class="lnr lnr-cross"></span>
-				                                </div><!--/.cart-close-->
-				                            </li><!--/.single-cart-list -->
-				                            <li class="single-cart-list">
-				                                <a href="#" class="photo"><img src="assets/images/collection/arrivals3.png" class="cart-thumb" alt="image" /></a>
-				                                <div class="cart-list-txt">
-				                                	<h6><a href="#">wooden arn <br> chair</a></h6>
-				                                	<p>1 x - <span class="price">$180.00</span></p>
-				                                </div><!--/.cart-list-txt-->
-				                                <div class="cart-close">
-				                                	<span class="lnr lnr-cross"></span>
-				                                </div><!--/.cart-close-->
-				                            </li><!--/.single-cart-list -->
-				                            <li class="total">
-				                                <span>Total: $0.00</span>
-				                                <button class="btn-cart pull-right" onclick="window.location.href='#'">view cart</button>
-				                            </li>
-				                        </ul>
-				                    </li><!--/.dropdown-->
+				                    <li class="nav-setting dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="lnr lnr-cog"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Profile</a></li>
+											<li><a href="Feedbacks.aspx">Feedbacks</a></li>
+											<li><a href="#">Settings</a></li>
+											<li><a href="Login.aspx">Logout</a></li>
+										</ul>
+									</li><!--/.dropdown-->
 				                </ul>
 				            </div><!--/.attr-nav-->
 				            <!-- End Atribute Navigation -->
@@ -139,7 +100,7 @@
 				                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 				                    <i class="fa fa-bars"></i>
 				                </button>
-				                <a class="navbar-brand" href="index.html">sine<span>mkt</span>.</a>
+				                <a class="navbar-brand" href="Admin_Home.aspx">F<span>Store</span>.</a>
 
 				            </div><!--/.navbar-header-->
 				            <!-- End Header Navigation -->
@@ -149,10 +110,9 @@
 				                <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
 				                    <li class=" scroll active"><a href="#home">home</a></li>
 				                    <li class=""><a href="Cat_Display.aspx">All Categories</a></li>
-				                    <li class=""><a href="Cat_Add.aspx">Add Category</a></li>
 				                    <li class=""><a href="Prod_Display.aspx">All Products</a></li>
-				                    <li class=""><a href="Prod_Add.aspx">Add Products</a></li>
-				                    <li class="scroll"><a href="#newsletter">contact</a></li>
+				                    <li class=""><a href="Cat_Add.aspx">Category <i class="fa fa-plus"></i></a></li>
+				                    <li class=""><a href="Prod_Add.aspx">Products <i class="fa fa-plus"></i></a></li>
 				                </ul><!--/.nav -->
 				            </div><!-- /.navbar-collapse -->
 				        </div>
@@ -181,14 +141,12 @@
 						<div class=" col-md-3 col-sm-6 col-xs-12">
 							<div class="hm-footer-widget">
 								<div class="hm-foot-title">
-									<h4>information</h4>
+									<h4>Information</h4>
 								</div><!--/.hm-foot-title-->
 								<div class="hm-foot-menu">
 									<ul>
-										<li><a href="#">about us</a></li><!--/li-->
-										<li><a href="#">contact us</a></li><!--/li-->
-										<li><a href="#">news</a></li><!--/li-->
-										<li><a href="#">store</a></li><!--/li-->
+										<li><a href="#">About Us</a></li><!--/li-->
+										<li><a href="#">Contact Us</a></li><!--/li-->
 									</ul><!--/ul-->
 								</div><!--/.hm-foot-menu-->
 							</div><!--/.hm-footer-widget-->
@@ -196,7 +154,7 @@
 						<div class=" col-md-3 col-sm-6 col-xs-12">
 							<div class="hm-footer-widget">
 								<div class="hm-foot-title">
-									<h4>collections</h4>
+									<h4>Collections</h4>
 								</div><!--/.hm-foot-title-->
 								<div class="hm-foot-menu">
 									<ul>
@@ -212,37 +170,31 @@
 						<div class=" col-md-3 col-sm-6 col-xs-12">
 							<div class="hm-footer-widget">
 								<div class="hm-foot-title">
-									<h4>my accounts</h4>
+									<h4>My Accounts</h4>
 								</div><!--/.hm-foot-title-->
 								<div class="hm-foot-menu">
 									<ul>
-										<li><a href="#">my account</a></li><!--/li-->
-										<li><a href="#">wishlist</a></li><!--/li-->
-										<li><a href="#">Community</a></li><!--/li-->
-										<li><a href="#">order history</a></li><!--/li-->
-										<li><a href="#">my cart</a></li><!--/li-->
+										<li><a href="#">My Account</a></li><!--/li-->
+										<li><a href="#">Wishlist</a></li><!--/li-->
+										<li><a href="#">Order History</a></li><!--/li-->
+										<li><a href="#">My Cart</a></li><!--/li-->
 									</ul><!--/ul-->
 								</div><!--/.hm-foot-menu-->
 							</div><!--/.hm-footer-widget-->
 						</div><!--/.col-->
-						<div class=" col-md-3 col-sm-6  col-xs-12">
+						<div class="col-md-3 col-sm-6 col-xs-12">
 							<div class="hm-footer-widget">
 								<div class="hm-foot-title">
-									<h4>newsletter</h4>
+									<h4>Social</h4>
 								</div><!--/.hm-foot-title-->
-								<div class="hm-foot-para">
-									<p>
-										Subscribe  to get latest news,update and information.
-									</p>
-								</div><!--/.hm-foot-para-->
-								<div class="hm-foot-email">
-									<div class="foot-email-box">
-										<input type="text" class="form-control" placeholder="Enter Email Here....">
-									</div><!--/.foot-email-box-->
-									<div class="foot-email-subscribe">
-										<span><i class="fa fa-location-arrow"></i></span>
-									</div><!--/.foot-email-icon-->
-								</div><!--/.hm-foot-email-->
+								<div class="hm-foot-menu">
+									<ul>
+										<li><a href="#"><i class="fa fa-envelope"></i> fstore@gmail.com</a></li><!--/li-->
+										<li><a href="#"><i class="fa fa-whatsapp"></i> +971 502346987</a></li><!--/li-->
+										<li><a href="#"><i class="fa fa-instagram"></i></a></li><!--/li-->
+										<li><a href="Cart.aspx"><i class="fa fa-pinterest"></i></a></li><!--/li-->
+									</ul><!--/ul-->
+								</div><!--/.hm-foot-menu-->
 							</div><!--/.hm-footer-widget-->
 						</div><!--/.col-->
 					</div><!--/.row-->
@@ -257,13 +209,7 @@
 		<footer id="footer"  class="footer">
 			<div class="container">
 				<div class="hm-footer-copyright text-center">
-					<div class="footer-social">
-						<a href="#"><i class="fa fa-facebook"></i></a>	
-						<a href="#"><i class="fa fa-instagram"></i></a>
-						<a href="#"><i class="fa fa-linkedin"></i></a>
-						<a href="#"><i class="fa fa-pinterest"></i></a>
-						<a href="#"><i class="fa fa-behance"></i></a>	
-					</div>
+					<p>&copy; 2024 FStore. All Rights Reserved.</p>
 				</div><!--/.text-center-->
 			</div><!--/.container-->
 

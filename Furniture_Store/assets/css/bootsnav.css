@@ -39,15 +39,14 @@ nav.bootsnav .dropdown.megamenu-fw .dropdown-menu {
 
 /* Navbar
 =================================*/
-nav.navbar.bootsnav{
+nav.navbar.bootsnav {
     margin-bottom: 0;
     -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
     -o-border-radius: 0px;
     border-radius: 0px;
-    background-color: #fff;
+    background-color: transparent;
     border: none;
-    border-bottom: solid 1px #e0e0e0;
     z-index: 9;
 }
 
@@ -703,10 +702,9 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     /* Atribute Navigation
     =================================*/    
     .attr-nav > ul > li.dropdown ul.dropdown-menu{
-        margin-top: 0;
+        margin-top: -30px;
         margin-left: 55px;
-        width: 250px;
-        left: -250px;
+        left: -100px;
     }
     
     /* Menu Center

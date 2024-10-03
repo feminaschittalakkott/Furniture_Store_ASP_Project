@@ -44,6 +44,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -119,9 +121,21 @@
     <Content Include="Cart.aspx" />
     <Content Include="Cat_Add.aspx" />
     <Content Include="Cat_Display.aspx" />
+    <Content Include="Connected Services\BalanceCheck\Furniture_Store.BalanceCheck.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\BalanceCheck\Service.disco" />
+    <None Include="Connected Services\BalanceCheck\configuration91.svcinfo" />
+    <None Include="Connected Services\BalanceCheck\configuration.svcinfo" />
+    <None Include="Connected Services\BalanceCheck\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Feedbacks.aspx" />
     <Content Include="index.html" />
     <Content Include="Login.aspx" />
     <Content Include="MainPage.aspx" />
+    <Content Include="OrderPlaced.aspx" />
     <Content Include="Payment.aspx" />
     <Content Include="Prod_Add.aspx" />
     <Content Include="Prod_Display.aspx" />
@@ -161,7 +175,19 @@
     <Compile Include="Cat_Display.aspx.designer.cs">
       <DependentUpon>Cat_Display.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\BalanceCheck\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="ConnectionCls.cs" />
+    <Compile Include="Feedbacks.aspx.cs">
+      <DependentUpon>Feedbacks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Feedbacks.aspx.designer.cs">
+      <DependentUpon>Feedbacks.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -189,6 +215,13 @@
     </Compile>
     <Compile Include="MainPage.aspx.designer.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderPlaced.aspx.cs">
+      <DependentUpon>OrderPlaced.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderPlaced.aspx.designer.cs">
+      <DependentUpon>OrderPlaced.aspx</DependentUpon>
     </Compile>
     <Compile Include="Payment.aspx.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
@@ -264,6 +297,16 @@
     <Content Include="assets\fonts\Linearicons-Free.woff2" />
     <Content Include="Main.Master" />
     <Content Include="Main1.Master" />
+    <None Include="Connected Services\BalanceCheck\Service.wsdl" />
+    <None Include="Connected Services\BalanceCheck\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BalanceCheck\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BalanceCheck\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -275,6 +318,12 @@
   <ItemGroup>
     <Folder Include="cat_images\" />
     <Folder Include="product_img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\BalanceCheck\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

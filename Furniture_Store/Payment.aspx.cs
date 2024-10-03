@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Collections.Generic;
 
 namespace Furniture_Store
 {
@@ -18,7 +20,7 @@ namespace Furniture_Store
                 AdrsList.DataSource = obc.Fun_Reader(qry);
                 AdrsList.DataBind();
 
-                string getPro = "select p.Prod_Name, p.Prod_Price, p.Prod_Img, o.Prod_Qty from Products p join Orders o on o.Prod_Id = p.Prod_Id where o.User_Id = " + Session["uid"] + "";
+                string getPro = "select p.Prod_Name, p.Prod_Price, p.Prod_Img, o.Prod_Qty, o.Tot_Price from Products p join Orders o on o.Prod_Id = p.Prod_Id where o.User_Id = " + Session["uid"] + "";
                 ProdOrdList.DataSource = obc.Fun_Reader(getPro);
                 ProdOrdList.DataBind();
 
@@ -35,6 +37,52 @@ namespace Furniture_Store
 
                 decimal TotalPmt = itemTotal + shippingTotal;
                 GtotField.Text = TotalPmt.ToString();
+            }
+        }
+
+        protected void BtnPlaceOrder_Click(object sender, EventArgs e)
+        {
+            BalanceCheck.ServiceClient ob = new BalanceCheck.ServiceClient();
+            decimal balance = ob.Balance_Check(Convert.ToInt32(Session["uid"]));
+            decimal gtotal = Convert.ToDecimal(GtotField.Text);
+            if(gtotal <= balance)
+            {
+                decimal newbalance = balance - gtotal;
+                string qry = "update Account_Table set Acc_Balance = " + newbalance + " where User_Id = " + Session["uid"] + "";
+                int i = obc.Fun_Nonquery(qry);
+                if(i == 1)
+                {
+                    string q1 = "update Bills set Bill_Status = 'Paid' where User_Id = " + Session["uid"] + " and Bill_Status = 'Initiated'";
+                    int j1 = obc.Fun_Nonquery(q1);
+                    if(j1 == 1)
+                    {
+                        List<int> prod_id = new List<int>();
+                        List<int> prod_qty = new List<int>();
+                        string q2 = "select Prod_Id, Prod_Qty from Orders where User_Id = " + Session["uid"] + " and Order_Status = 'Ordered'";
+                        SqlDataReader dr = obc.Fun_Reader(q2);
+                        while (dr.Read())
+                        {
+                            prod_id.Add(Convert.ToInt32(dr["Prod_Id"]));
+                            prod_qty.Add(Convert.ToInt32(dr["Prod_Qty"]));
+                        }
+                        for (int k = 0; k < prod_id.Count; k++)
+                        {
+                            string updateQry = "update Products set Prod_Stock = Prod_Stock - " + prod_qty[k] + " where Prod_Id = " + prod_id[k] + "";
+                            int j2 = obc.Fun_Nonquery(updateQry);
+                            if(j2 < 1)
+                            {
+                                ErrMsg.Visible = true;
+                                ErrMsg.Text = "Failed to update product with Prod_Id: " + prod_id[k];
+                            }
+                        }
+                        Response.Redirect("OrderPlaced.aspx");
+                    }
+                }
+            }
+            else
+            {
+                ErrMsg.Visible = true;
+                ErrMsg.Text = "Insufficient Balance !!!";
             }
         }
     }

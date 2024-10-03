@@ -229,6 +229,8 @@
                             <td class="auto-style16">&nbsp;</td>
                             <td>
                                 <asp:Button ID="AccAdd" runat="server" BackColor="#E99C2E" BorderStyle="None" Font-Bold="True" Height="30px" Text="Add" Width="100px" OnClick="AccAdd_Click" />
+                                <asp:Button ID="BtnEditPay" runat="server" BackColor="#E99C2E" BorderStyle="None" Font-Bold="True" Height="30px" Text="Edit" Width="100px" OnClick="BtnEditPay_Click" Visible="False" />&nbsp;
+                                <asp:Button ID="BtnPayContinue" runat="server" BackColor="#E99C2E" BorderStyle="None" Font-Bold="True" Height="30px" Text="Continue Payment" Width="140px" OnClick="BtnPayContinue_Click" Visible="False" />
                             </td>
                         </tr>
                         <tr>
@@ -237,9 +239,9 @@
                             <td class="auto-style1"></td>
                         </tr>
                         <tr>
-                            <td class="auto-style17">&nbsp;</td>
-                            <td class="auto-style16">&nbsp;</td>
-                            <td>
+                            <td class="auto-style14"></td>
+                            <td class="auto-style11"></td>
+                            <td class="auto-style1">
                                 <asp:Label ID="LblMsg" runat="server" ForeColor="Red" Text="Label" Visible="False"></asp:Label>
                             </td>
                         </tr>

@@ -150,6 +150,24 @@ namespace Furniture_Store
         protected global::System.Web.UI.WebControls.Button AccAdd;
 
         /// <summary>
+        /// BtnEditPay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnEditPay;
+
+        /// <summary>
+        /// BtnPayContinue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnPayContinue;
+
+        /// <summary>
         /// LblMsg control.
         /// </summary>
         /// <remarks>

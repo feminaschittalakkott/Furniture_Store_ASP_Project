@@ -90,7 +90,7 @@
                                 <td>
                                     <asp:Label ID="Label7" runat="server" Text='<%# Eval("Prod_Name") %>'></asp:Label>
                                     <br />
-                                    <asp:Label ID="Label8" runat="server" Text='<%# Eval("Prod_Price") %>'></asp:Label>
+                                    <asp:Label ID="Label8" runat="server" Text='<%# Eval("Tot_Price") %>'></asp:Label>
                                     <br />
                                     <asp:Label ID="Label9" runat="server" Text="Quantity : "></asp:Label>
                                     <asp:Label ID="Label10" runat="server" Text='<%# Eval("Prod_Qty") %>'></asp:Label>
@@ -141,9 +141,11 @@
             </td>
             <td class="auto-style3">
                 <asp:Label ID="GtotField" runat="server" Text="Label" Font-Bold="True" Font-Size="Large"></asp:Label>
+                <br />
+                <asp:Label ID="ErrMsg" runat="server" ForeColor="Red" Text="Label" Visible="False"></asp:Label>
             </td>
             <td>
-                <asp:Button ID="BtnPlaceOrder" runat="server" Text="Place your order" CssClass="placeorder" Font-Bold="True" />
+                <asp:Button ID="BtnPlaceOrder" runat="server" Text="Place your order" CssClass="placeorder" Font-Bold="True" OnClick="BtnPlaceOrder_Click" />
             </td>
         </tr>
     </table>
