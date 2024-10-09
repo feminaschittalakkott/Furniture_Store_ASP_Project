@@ -19,12 +19,16 @@ namespace Furniture_Store
         {
             PanelAdmin.Visible = true;
             PanelUser.Visible = false;
+            BtnAdmin.CssClass += " activemenu";
+            BtnUser.CssClass = BtnUser.CssClass.Replace(" activemenu", "").Trim();
         }
 
         protected void BtnUser_Click(object sender, EventArgs e)
         {
-            PanelAdmin.Visible = false;
             PanelUser.Visible = true;
+            PanelAdmin.Visible = false;
+            BtnUser.CssClass += " activemenu";
+            BtnAdmin.CssClass = BtnUser.CssClass.Replace(" activemenu", "").Trim();
         }
 
         protected void AdminSubmit_Click(object sender, EventArgs e)
@@ -45,7 +49,7 @@ namespace Furniture_Store
             int i = obc.Fun_Nonquery(insqry);
             if(i == 1)
             {
-                string inslog = "insert into Login values("+ reg_id + ", '"+ AdminUname.Text + "', '"+ AdminPass.Text + "', 'admin', 'active')";
+                string inslog = "insert into Login values("+ reg_id + ", '"+ AdminUname.Text + "', '"+ AdminCPass.Text + "', 'admin', 'active')";
                 int j = obc.Fun_Nonquery(inslog);
                 if(j == 1)
                 {
@@ -76,7 +80,7 @@ namespace Furniture_Store
             int i = obc.Fun_Nonquery(insqry);
             if (i == 1)
             {
-                string inslog = "insert into Login values(" + reg_id + ", '" + UserUname.Text + "', '" + UserPass.Text + "', 'user', 'active')";
+                string inslog = "insert into Login values(" + reg_id + ", '" + UserUname.Text + "', '" + userCPass.Text + "', 'user', 'active')";
                 int j = obc.Fun_Nonquery(inslog);
                 if (j == 1)
                 {

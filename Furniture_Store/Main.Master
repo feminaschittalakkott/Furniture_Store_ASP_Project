@@ -103,7 +103,7 @@
 											<li><a href="#">Orders</a></li>
 											<li><a href="#">Wishlist</a></li>
 											<li><a href="#">Settings</a></li>
-											<li><a href="Login.aspx">Logout</a></li>
+											<li><a href="Logout.aspx">Logout</a></li>
 										</ul>
 									</li><!--/.settings-->
 				                    <li class="cart">

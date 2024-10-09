@@ -24,15 +24,6 @@ namespace Furniture_Store
         protected global::System.Web.UI.WebControls.Label cartLable;
 
         /// <summary>
-        /// LblEmptyCart control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblEmptyCart;
-
-        /// <summary>
         /// CartPanel control.
         /// </summary>
         /// <remarks>
@@ -103,5 +94,14 @@ namespace Furniture_Store
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Btn_Proceed;
+
+        /// <summary>
+        /// LblEmptyCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblEmptyCart;
     }
 }

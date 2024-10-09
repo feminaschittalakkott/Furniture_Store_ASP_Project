@@ -11,25 +11,34 @@ namespace Furniture_Store
 {
 
 
-    public partial class Feedbacks
+    public partial class Send_Feedback
     {
 
         /// <summary>
-        /// lblNoData control.
+        /// TxtFeed control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNoData;
+        protected global::System.Web.UI.WebControls.TextBox TxtFeed;
 
         /// <summary>
-        /// FeedGrid control.
+        /// BtnFeedSend control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView FeedGrid;
+        protected global::System.Web.UI.WebControls.Button BtnFeedSend;
+
+        /// <summary>
+        /// LblMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblMsg;
     }
 }

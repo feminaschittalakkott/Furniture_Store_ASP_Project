@@ -83,7 +83,9 @@
     <div class="login-container">
     <h2>Login</h2>
     <asp:TextBox ID="TxtUname" CssClass="input-field" runat="server" placeholder="Username"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter the username !" ControlToValidate="TxtUname" ForeColor="Red"></asp:RequiredFieldValidator>
     <asp:TextBox ID="TxtPwd" CssClass="input-field" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter the password !" ControlToValidate="TxtPwd" ForeColor="Red"></asp:RequiredFieldValidator>
     
     <center>
         <asp:Button ID="BtnLogin" runat="server" CssClass="login-btn" Text="Login" OnClick="BtnLogin_Click" Height="30px" />

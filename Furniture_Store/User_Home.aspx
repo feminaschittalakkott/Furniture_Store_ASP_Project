@@ -50,10 +50,10 @@
         </tr>
         <tr>
             <td>
-                <asp:DataList ID="CatListHome" runat="server" RepeatDirection="Horizontal" RepeatColumns="4" CellSpacing="25" CssClass="datalist-container">
+                <asp:DataList ID="CatListHome" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" CellSpacing="25" CssClass="datalist-container">
                     <ItemTemplate>
                         <div class="datalist-item">
-                            <asp:ImageButton ID="IBtnCats" runat="server" Height="170px" ImageUrl='<%# Eval("Cat_Img") %>' Width="210px" ImageAlign="Middle" CssClass="datalist-image" CommandArgument='<%# Eval("Cat_Id") %>' OnCommand="IBtnCats_Command" />
+                            <asp:ImageButton ID="IBtnCats" runat="server" Height="250px" ImageUrl='<%# Eval("Cat_Img") %>' Width="300px" ImageAlign="Middle" CssClass="datalist-image" CommandArgument='<%# Eval("Cat_Id") %>' OnCommand="IBtnCats_Command" />
                             <br />
                             <center><asp:Label ID="Label1" runat="server" Text='<%# Eval("Cat_Name") %>' ForeColor="Black" CssClass="datalist-label"></asp:Label></center>
                         </div>

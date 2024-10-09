@@ -87,13 +87,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="nav-justified" id="prod-display-table">
     <tr>
-        <td class="auto-style3"></td>
-        <td class="auto-style4"></td>
-    </tr>
-    <tr>
         <td class="auto-style1">&nbsp;</td>
         <td class="auto-style6">
-            <center><asp:Label ID="Lblhead" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Products" ForeColor="Black"></asp:Label></center>
+            <center><asp:Label ID="Lblhead" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Products"></asp:Label></center>
         </td>
     </tr>
     <tr>
@@ -150,56 +146,6 @@
         <td class="auto-style3"></td>
         <td class="auto-style4">
             </td>
-    </tr>
-    <tr>
-        <td class="auto-style3"></td>
-        <td class="auto-style4"></td>
-    </tr>
-    <tr>
-        <td class="auto-style3"></td>
-        <td class="auto-style4">
-            &nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style6">
-            &nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style3"></td>
-        <td class="auto-style4"></td>
-    </tr>
-    <tr>
-        <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style6">
-            &nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style3"></td>
-        <td class="auto-style4">
-            &nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style6">&nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style6">
-            &nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style6">&nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style6">
-            &nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style6">&nbsp;</td>
     </tr>
     </table>
 </asp:Content>

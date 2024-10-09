@@ -63,7 +63,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="nav-justified" id="CartTable">
         <tr>
-            <td class="auto-style13">
+            <td class="auto-style13 text-center">
                 <asp:Label ID="cartLable" runat="server" Font-Italic="True" Font-Size="X-Large" ForeColor="Black" Text="Shopping Cart"></asp:Label>
             </td>
             <td class="auto-style14">
@@ -72,7 +72,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Label ID="LblEmptyCart" runat="server" Text="Your cart is empty!" Font-Bold="True" ForeColor="Red" Font-Size="Large" Visible="False" CssClass="text-center"></asp:Label>
+                
             </td>
             <td>
 
@@ -206,7 +206,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style10">&nbsp;</td>
+            <td class="auto-style10 text-center"><asp:Label ID="LblEmptyCart" runat="server" Text="Your cart is empty!"  Font-Size="Medium" Visible="False" Font-Italic="True"></asp:Label></td>
             <td>&nbsp;</td>
         </tr>
         <tr>

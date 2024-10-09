@@ -68,7 +68,7 @@
     <tr>
         <td class="auto-style1">&nbsp;</td>
         <td class="auto-style2">
-            <asp:Label ID="LblCat" runat="server" Font-Size="Small" ForeColor="Black" Text="Category"></asp:Label>
+            <asp:Label ID="LblCat" runat="server" Font-Size="Small" ForeColor="Black" Text="Category" Font-Italic="True"></asp:Label>
         </td>
         <td>&nbsp;</td>
     </tr>
@@ -82,13 +82,15 @@
     </tr>
     <tr>
         <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style2">&nbsp;</td>
+        <td class="auto-style2">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="CatList" ErrorMessage="Please select a category !" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
+        </td>
         <td>&nbsp;</td>
     </tr>
     <tr>
         <td class="auto-style3"></td>
         <td class="auto-style4">
-            <asp:Label ID="LblProd" runat="server" Font-Size="Small" ForeColor="Black" Text="Product Name"></asp:Label>
+            <asp:Label ID="LblProd" runat="server" Font-Size="Small" ForeColor="Black" Text="Product Name" Font-Italic="True"></asp:Label>
         </td>
         <td class="auto-style5"></td>
     </tr>
@@ -101,13 +103,15 @@
     </tr>
     <tr>
         <td class="auto-style3"></td>
-        <td class="auto-style4"></td>
+        <td class="auto-style4">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TxtProdName" ErrorMessage="Please enter product name !" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
+        </td>
         <td class="auto-style5"></td>
     </tr>
     <tr>
         <td class="auto-style1">&nbsp;</td>
         <td class="auto-style2">
-            <asp:Label ID="LblPrice" runat="server" Font-Size="Small" ForeColor="Black" Text="Price"></asp:Label>
+            <asp:Label ID="LblPrice" runat="server" Font-Size="Small" ForeColor="Black" Text="Price" Font-Italic="True"></asp:Label>
         </td>
         <td>&nbsp;</td>
     </tr>
@@ -120,13 +124,15 @@
     </tr>
     <tr>
         <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style2">&nbsp;</td>
+        <td class="auto-style2">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TxtProdPrice" ErrorMessage="Please enter product price !" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
+        </td>
         <td>&nbsp;</td>
     </tr>
     <tr>
         <td class="auto-style1">&nbsp;</td>
         <td class="auto-style2">
-            <asp:Label ID="LblStock" runat="server" Font-Size="Small" ForeColor="Black" Text="Stock"></asp:Label>
+            <asp:Label ID="LblStock" runat="server" Font-Size="Small" ForeColor="Black" Text="Stock" Font-Italic="True"></asp:Label>
         </td>
         <td>&nbsp;</td>
     </tr>
@@ -140,13 +146,14 @@
     <tr>
         <td class="auto-style3"></td>
         <td class="auto-style4">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TxtProdStock" ErrorMessage="Please enter product stock !" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
         <td class="auto-style5"></td>
     </tr>
     <tr>
         <td class="auto-style1">&nbsp;</td>
         <td class="auto-style2">
-            <asp:Label ID="LblPhoto" runat="server" Font-Size="Small" ForeColor="Black" Text="Photo"></asp:Label>
+            <asp:Label ID="LblPhoto" runat="server" Font-Size="Small" ForeColor="Black" Text="Photo" Font-Italic="True"></asp:Label>
         </td>
         <td>&nbsp;</td>
     </tr>
@@ -159,13 +166,15 @@
     </tr>
     <tr>
         <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style2">&nbsp;</td>
+        <td class="auto-style2">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="ProdImg" ErrorMessage="Please upload product image !" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
+        </td>
         <td>&nbsp;</td>
     </tr>
     <tr>
         <td class="auto-style3"></td>
         <td class="auto-style4">
-            <asp:Label ID="LblDesc" runat="server" Font-Size="Small" ForeColor="Black" Text="Description"></asp:Label>
+            <asp:Label ID="LblDesc" runat="server" Font-Size="Small" ForeColor="Black" Text="Description" Font-Italic="True"></asp:Label>
         </td>
         <td class="auto-style5"></td>
     </tr>
@@ -178,7 +187,9 @@
     </tr>
     <tr>
         <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style2">&nbsp;</td>
+        <td class="auto-style2">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="ProdDesc" ErrorMessage="Please enter product description !" ForeColor="Red"></asp:RequiredFieldValidator>
+        </td>
         <td>&nbsp;</td>
     </tr>
     <tr>

@@ -93,7 +93,10 @@ html,body{height: 100%;}
 /*-------------------------------------
         2. Top-area
 --------------------------------------*/
-.wrap-sticky nav.navbar.bootsnav.sticked {background-color: #fff;box-shadow: 0 2px 5px rgba(0,0,0,.2);}
+.wrap-sticky nav.navbar.bootsnav.sticked {
+    background-color: #f8f9fd;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
 /*.navbar-brand*/
 .navbar-header a.navbar-brand,.navbar-header a.navbar-brand:hover,.navbar-header a.navbar-brand:focus {
     display: inline-block;

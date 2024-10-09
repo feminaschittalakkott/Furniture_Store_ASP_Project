@@ -73,7 +73,9 @@
     </tr>
     <tr>
         <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style2">&nbsp;</td>
+        <td class="auto-style2">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TxtCatname" ErrorMessage="Please enter the category !" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
+        </td>
         <td>&nbsp;</td>
     </tr>
     <tr>
@@ -92,7 +94,9 @@
     </tr>
     <tr>
         <td class="auto-style3"></td>
-        <td class="auto-style4"></td>
+        <td class="auto-style4">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="CatImg" ErrorMessage="Please upload category image !" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
+        </td>
         <td class="auto-style5"></td>
     </tr>
     <tr>
@@ -111,7 +115,9 @@
     </tr>
     <tr>
         <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style2">&nbsp;</td>
+        <td class="auto-style2">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="CatDescription" ErrorMessage="Please enter description for category !" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
+        </td>
         <td>&nbsp;</td>
     </tr>
     <tr>

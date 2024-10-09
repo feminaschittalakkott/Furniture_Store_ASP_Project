@@ -77,11 +77,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="nav-justified" id="cat-display-table">
     <tr>
-        <td class="auto-style3"></td>
-        <td class="auto-style4"></td>
-        <td class="auto-style5"></td>
-    </tr>
-    <tr>
         <td colspan="3">
             <center><asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Categories"></asp:Label></center>
         </td>
@@ -123,67 +118,6 @@
         <td class="auto-style1">&nbsp;</td>
         <td class="auto-style2">
             &nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style3"></td>
-        <td class="auto-style4"></td>
-        <td class="auto-style5"></td>
-    </tr>
-    <tr>
-        <td class="auto-style3"></td>
-        <td class="auto-style4">
-            &nbsp;</td>
-        <td class="auto-style5"></td>
-    </tr>
-    <tr>
-        <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style2">
-            &nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style3"></td>
-        <td class="auto-style4"></td>
-        <td class="auto-style5"></td>
-    </tr>
-    <tr>
-        <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style2">
-            &nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style3"></td>
-        <td class="auto-style4">
-            &nbsp;</td>
-        <td class="auto-style5"></td>
-    </tr>
-    <tr>
-        <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style2">&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style2">
-            &nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style2">&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style2">
-            &nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style1">&nbsp;</td>
-        <td class="auto-style2">&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
     </table>

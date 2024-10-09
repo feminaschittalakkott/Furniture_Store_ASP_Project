@@ -37,7 +37,8 @@
         <div class="text-center">
             <div class="order-icon">✔️</div>
             <h1>Your Order Placed Successfully !</h1>
-            <a href="User_Home.aspx">Continue Shopping</a>
+            <a href="User_Home.aspx">Continue Shopping...</a>&nbsp;
+            <a href="Send_Feedback.aspx">Send Feedback!</a>
         </div>
     </form>
 </body>

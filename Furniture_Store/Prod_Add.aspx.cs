@@ -21,7 +21,7 @@ namespace Furniture_Store
                 CatList.DataTextField = "Cat_Name";
                 CatList.DataValueField = "Cat_Id";
                 CatList.DataBind();
-                CatList.Items.Insert(0, new ListItem("Select", "0"));
+                CatList.Items.Insert(0, new ListItem("Select", ""));
             }
         }
 

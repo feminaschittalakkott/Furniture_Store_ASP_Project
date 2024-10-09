@@ -88,7 +88,7 @@
 											<li><a href="#">Profile</a></li>
 											<li><a href="Feedbacks.aspx">Feedbacks</a></li>
 											<li><a href="#">Settings</a></li>
-											<li><a href="Login.aspx">Logout</a></li>
+											<li><a href="Logout.aspx">Logout</a></li>
 										</ul>
 									</li><!--/.dropdown-->
 				                </ul>

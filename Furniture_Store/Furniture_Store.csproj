@@ -134,6 +134,7 @@
     <Content Include="Feedbacks.aspx" />
     <Content Include="index.html" />
     <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="MainPage.aspx" />
     <Content Include="OrderPlaced.aspx" />
     <Content Include="Payment.aspx" />
@@ -141,6 +142,7 @@
     <Content Include="Prod_Display.aspx" />
     <Content Include="Prod_SingleView.aspx" />
     <Content Include="Prod_View.aspx" />
+    <Content Include="Send_Feedback.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="User_Home.aspx" />
     <Content Include="viewBill.aspx" />
@@ -194,6 +196,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
@@ -259,6 +268,13 @@
       <DependentUpon>Prod_View.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Send_Feedback.aspx.cs">
+      <DependentUpon>Send_Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Send_Feedback.aspx.designer.cs">
+      <DependentUpon>Send_Feedback.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

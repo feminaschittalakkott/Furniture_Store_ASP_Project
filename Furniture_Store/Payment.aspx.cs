@@ -54,12 +54,14 @@ namespace Furniture_Store
                 {
                     string q1 = "update Bills set Bill_Status = 'Paid' where User_Id = " + Session["uid"] + " and Bill_Status = 'Initiated'";
                     int j1 = obc.Fun_Nonquery(q1);
-                    if(j1 == 1)
+                    string q2 = "update Orders set Order_Status = 'Paid' where User_Id = " + Session["uid"] + " and Order_Status = 'Ordered'";
+                    int j2 = obc.Fun_Nonquery(q2);
+                    if (j1 == 1 && j2 == 1)
                     {
                         List<int> prod_id = new List<int>();
                         List<int> prod_qty = new List<int>();
-                        string q2 = "select Prod_Id, Prod_Qty from Orders where User_Id = " + Session["uid"] + " and Order_Status = 'Ordered'";
-                        SqlDataReader dr = obc.Fun_Reader(q2);
+                        string q3 = "select Prod_Id, Prod_Qty from Orders where User_Id = " + Session["uid"] + " and Order_Status = 'Paid'";
+                        SqlDataReader dr = obc.Fun_Reader(q3);
                         while (dr.Read())
                         {
                             prod_id.Add(Convert.ToInt32(dr["Prod_Id"]));
@@ -68,8 +70,8 @@ namespace Furniture_Store
                         for (int k = 0; k < prod_id.Count; k++)
                         {
                             string updateQry = "update Products set Prod_Stock = Prod_Stock - " + prod_qty[k] + " where Prod_Id = " + prod_id[k] + "";
-                            int j2 = obc.Fun_Nonquery(updateQry);
-                            if(j2 < 1)
+                            int j3 = obc.Fun_Nonquery(updateQry);
+                            if(j3 < 1)
                             {
                                 ErrMsg.Visible = true;
                                 ErrMsg.Text = "Failed to update product with Prod_Id: " + prod_id[k];
