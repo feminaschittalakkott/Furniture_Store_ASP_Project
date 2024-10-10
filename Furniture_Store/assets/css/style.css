@@ -26,18 +26,16 @@ font-family: 'Roboto', sans-serif;
 /*-------------------------------------
 		1.General css (Reset code)
 --------------------------------------*/
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-*{
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-o-box-sizing:border-box;
-	-ms-box-sizing:border-box;
-	box-sizing:border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
 }
 body{
 	font-family: 'Roboto', sans-serif;
@@ -124,6 +122,10 @@ nav.navbar.bootsnav ul.nav > li > a {
     transition: 0.3s linear;
 }
 nav.navbar.bootsnav ul.nav > li > a {padding: 35px 25px;}
+nav.navbar.bootsnav ul.nav > li > input {
+    margin: 30px 10px;
+    min-width: 400px;
+}
 nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus{color: #e99c2e;}
 nav.navbar.bootsnav ul.nav > li.active>a {color: #e99c2e;}
 
@@ -729,7 +731,6 @@ span.feature-review {margin-left: 10px;}
 --------------------------------------*/
 .newsletter{padding:120px 0 75px;}
 
-.hm-footer-widget{margin-bottom: 30px;}
 .hm-foot-title h4 {
     font-size: 18px;
     font-weight: 700;
@@ -760,38 +761,6 @@ span.feature-review {margin-left: 10px;}
     margin-bottom: 25px;
 }
 
-/*hm-foot-email*/
-.hm-foot-email{position: relative;}
-.foot-email-box .form-control {
-    background:#fff;
-    display: block;
-    padding:25px 15px;
-    outline:0!important;
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
-    border:0;
-}
-.foot-email-box input[type="text"]{
-    font-size: 14px;
-    color: #bcb7b2;
-}
-.foot-email-subscribe {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50px;
-    height: 100%;
-    background: transparent;
-    color: #e99c2e;
-    font-size: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.foot-email-box .form-control:hover{
-    box-shadow:0 5px 15px rgba(0,0,0,.4);
-}
-/*hm-foot-email*/
-
 
 /*-------------------------------------
         11. Footer
@@ -800,23 +769,14 @@ span.feature-review {margin-left: 10px;}
     background: #f8f9fd;
     display: flex;
     align-items: center;
-    height: 154px;
+    height: 140px;
 }
 .hm-footer-copyright p,.hm-footer-copyright p a {
     color: #a5adb3;
     font-size: 14px;
     font-weight: 400;
 }
-.footer-social a i {
-    color: #a4aaaf;
-    margin: 0 18px 24px 0;
-    -webkit-transition: .3s; 
-    -moz-transition:.3s; 
-    -ms-transition:.3s; 
-    -o-transition:.3s;
-    transition: .3s;
-}
-.footer-social i:hover{color: #e99c2e;}
+
 
 /*===============================
     Scroll Top
@@ -866,4 +826,4 @@ span.feature-review {margin-left: 10px;}
     0%   {bottom:0px;}
     100%  {bottom:7px;}
 }
-/*========================Thank you=================
+/*========================Thank you================= */

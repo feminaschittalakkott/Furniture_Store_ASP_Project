@@ -13,11 +13,13 @@
 
         .datalist-item {
             width:250px;
+            height: 350px;
             margin: 15px;
-            padding: 10px;
+            padding: 5px;
             background-color: #f9f9f9;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             overflow: hidden;
+            text-align: center;
         }
 
         .datalist-item:hover {
@@ -26,12 +28,17 @@
         }
 
         .datalist-image {
-            border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .datalist-label {
-            font-size: 16px;
+        .datalist-description {
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+            word-wrap: break-word;
+            white-space: normal;
+            display: block;
+            line-height: 1.5;
             margin-top: 10px;
         }
         .auto-style1 {
@@ -54,13 +61,13 @@
                 <asp:DataList ID="ProdList" runat="server" RepeatDirection="Horizontal" RepeatColumns="4" CellSpacing="25" CssClass="datalist-container">
                     <ItemTemplate>
                         <div class="datalist-item">
-                            <asp:ImageButton ID="ProdImagBtn" runat="server" CssClass="datalist-image" Height="160px" Width="100%" CommandArgument='<%# Eval("Prod_Id") %>' ImageUrl='<%# Eval("Prod_Img") %>' OnCommand="ProdImagBtn_Command" />
+                            <asp:ImageButton ID="ProdImagBtn" runat="server" CssClass="datalist-image" Height="180px" Width="100%" CommandArgument='<%# Eval("Prod_Id") %>' ImageUrl='<%# Eval("Prod_Img") %>' OnCommand="ProdImagBtn_Command" />
                             <br />
                             <asp:Label ID="Prod_Name" runat="server" CssClass="datalist-label" Text='<%# Eval("Prod_Name") %>'></asp:Label>
                                 <br />
                                 <asp:Label ID="Prod_Price" runat="server" CssClass="datalist-label" Text='<%# "₹ " + Eval("Prod_Price") %>' Font-Size="14px" ForeColor="Black"></asp:Label>
                                 <br />
-                                <asp:Label ID="Prod_Descr" runat="server" CssClass="datalist-label" Text='<%# Eval("Prod_Description") %>' Width="300px" Font-Size="16px" ForeColor="Black"></asp:Label>
+                                <asp:Label ID="Prod_Descr" runat="server" CssClass="datalist-description" Text='<%# Eval("Prod_Description") %>' ForeColor="Black"></asp:Label>
                         </div>
                     </ItemTemplate>
                 </asp:DataList>
